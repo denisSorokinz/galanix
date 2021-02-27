@@ -1,0 +1,45 @@
+@import "reset.css"
+@import "_variables.scss"
+@import "fluid-type.scss"
+
+$min_width: 320px
+$max_width: 1920px
+$min_font: 12px
+$max_font: 16px
+
+html
+    @include fluid-type($min_width, $max_width, $min_font, $max_font)
+
+body
+    header.header
+        padding: 1rem 0
+        h1.header__heading
+            text-align: center
+            font-size: 2.5rem
+    main
+        section.flags
+            padding: 3rem 1rem
+            ul.flags__list
+                max-width: 75%
+                margin: auto
+                li.list__item
+                    text-align: center
+                    &:not(:last-of-type)
+                        margin-bottom: 3rem
+                    figure.item__flag
+                        img.flag__image
+                            max-width: 100%
+                            width: 18.75rem
+                            margin-bottom: 1rem
+                            object-fit: contain
+                            border-radius: 1rem
+                            box-shadow: 0 0 2rem 0 $black
+                            &:hover
+                                transform: scale(1.25)
+                                & + .flag__description
+                                    transform: scale(0)
+                        figcaption.flag__description
+                            font-size: 1.5rem
+                        img.flag__image,
+                        figcaption.flag__description
+                            transition: transform 0.5s, filter 0.5s
