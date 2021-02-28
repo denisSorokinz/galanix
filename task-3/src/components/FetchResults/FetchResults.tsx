@@ -19,7 +19,7 @@ const FetchResults: React.FC<FetchResultsProps> = ({
     let singleColumnWidth: number | null = null;
     if (data && table) {
         indexedTable = getIndexedTable(table);
-        singleColumnWidth = 1 / (Object.keys(data[0]).length + 2);
+        singleColumnWidth = 1 / (Object.keys(data[0]).length + 1);
     }
 
     return (

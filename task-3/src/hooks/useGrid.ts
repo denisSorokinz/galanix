@@ -5,7 +5,7 @@ const useGrid = (data: fetchedData | null): Array<fetchedData> | null => {
     let rows: Array<fetchedData> = [[]];
     let currentRow = 0;
     let columnWidthsSum = 0;
-    const singleColumnWidth = 1 / (Object.keys(data[0]).length + 2);
+    const singleColumnWidth = 1 / (Object.keys(data[0]).length + 1);
     data.map((_, index) => {
         columnWidthsSum += singleColumnWidth;
         if (columnWidthsSum == 1) {
